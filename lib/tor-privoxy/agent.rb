@@ -19,8 +19,9 @@ module TorPrivoxy
       while max >= 0 and not ok
         begin
           max = max - 1
-          @mechanize.send method, *args, &block
+          response = @mechanize.send method, *args, &block
           ok = true
+          response
         rescue Mechanize::ResponseCodeError # 403 etc
           switch_circuit
           retry
