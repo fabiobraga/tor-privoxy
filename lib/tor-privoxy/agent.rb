@@ -15,7 +15,7 @@ module TorPrivoxy
     def method_missing method, *args, &block
       max = 3
 
-      ok       = true
+      ok = false
       response = nil
       while max >= 0 and not ok
         begin
