@@ -13,7 +13,6 @@ module TorPrivoxy
     end
 
     def method_missing method, *args, &block
-      puts "DOING STUFF...."
       @mechanize.send method, *args, &block
     end
 
