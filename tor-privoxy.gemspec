@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name = "tor-privoxy"
-  gem.version = "0.1.2"
+  gem.version = "0.1.3"
   gem.description = "Mechanize wrapper to work via Tor/Privoxy with endpoint switching ability"
   gem.summary = gem.description
   gem.authors = ["Phil Pirozhkov"]

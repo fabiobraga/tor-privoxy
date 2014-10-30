@@ -13,23 +13,8 @@ module TorPrivoxy
     end
 
     def method_missing method, *args, &block
-      max = 3
-
-      ok = false
-      response = nil
-      while max >= 0 and not ok
-        begin
-          ok = true
-          max = max - 1
-          response = @mechanize.send method, *args, &block
-        rescue Mechanize::ResponseCodeError # 403 etc
-          ok = false
-          switch_circuit
-          retry
-        end
-      end
-
-      response
+      puts "DOING STUFF...."
+      @mechanize.send method, *args, &block
     end
 
     def switch_circuit
